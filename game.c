@@ -46,7 +46,7 @@ void showdinosaur(int diY, int diX) {
 }
 
 // Give user the prize
-int computePrize(int score, int usedPrize) {
+int computePrize(int score, int usedPrize) { \\Give the user the missile
 	if (score >= 20 && score <= 40 && usedPrize == 0) {
 		return 1;
 	}
@@ -60,7 +60,7 @@ int computePrize(int score, int usedPrize) {
 }
 
 // The main engine!
-void startEngine(int highScore, struct user firstUser) {
+void startEngine(int highScore, struct user firstUser) {\\ What should me shown by this code
     srand(time(NULL));
 	int x, y, diX=5, prize=0, usedPrize=0, score=0, delayTime = 300000
     , gameStatus=1, cactusNum=0;
