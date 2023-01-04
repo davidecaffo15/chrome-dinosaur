@@ -20,4 +20,4 @@ gcc main.c game.c appearance.c menu.c -lncurses -o dino.exe
 ```
 
 #### Sample screenshot:
-![](Images/1.png)
+![](screen-1.png)
