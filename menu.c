@@ -22,6 +22,7 @@ void startMenu() {
 	attron(COLOR_PAIR(3));
 	showTrex(maxY, maxX);
 	attroff(COLOR_PAIR(3));
+	mvprintw(maxY+1, maxX-28, "Version 1.1.0");
     // Get info
 	mvprintw(maxY+1, maxX-28, "Write inputs and press Enter to start the Game.");
     mvprintw(maxY+2, maxX-26, "When you had prize, fire it with 'k' key!");
