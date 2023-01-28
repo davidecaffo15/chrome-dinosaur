@@ -7,7 +7,10 @@
 #include "game.h"
 #include "appearance.h"
 #include "minunit.h"
-
+/**
+ * @fn int checkGame
+ * @brief This function is the checkpoint of the entire game
+ */
 // Check if the game is going to be finished in this turn of loop
 int checkGame(int y, int x, int diY, int diX) {
 	if (diY == y) {
@@ -17,7 +20,10 @@ int checkGame(int y, int x, int diY, int diX) {
 	}
 	return 1;
 }
-
+/**
+ * @fn int computeTime
+ * @brief This function makes the game faster meanwhile you are playing
+ */
 // Make game faster
 int computeTime(int delayTime) {
 	if (delayTime >= 250000) {
@@ -46,7 +52,7 @@ void showdinosaur(int diY, int diX) {
 }
 
 // Give user the prize
-int computePrize(int score, int usedPrize) { \\Give the user the missile
+int computePrize(int score, int usedPrize) { 
 	if (score >= 20 && score <= 40 && usedPrize == 0) {
 		return 1;
 	}
@@ -58,10 +64,12 @@ int computePrize(int score, int usedPrize) { \\Give the user the missile
 	}	
 	return 0;
 }
-
+/**
+ * @fn int startEngine
+ * @brief This function makes the whole game work
+ */
 // The main engine!
 void startEngine(int highScore, struct user firstUser) {
-\\ What should be shown by this code
     srand(time(NULL));
 	int x, y, diX=5, prize=0, usedPrize=0, score=0, delayTime = 300000
     , gameStatus=1, cactusNum=0;

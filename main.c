@@ -4,7 +4,10 @@
 #include <stdio.h>
 #include "menu.h"
 #include "minunit.h"
-
+/**
+ * @authors Vlad Ambrosi, Andrea Bagarini, Davide Caffo, Stefano Rosano
+ * @version 1.1 
+ */
 int main(int argc, char **argv) {
 	// Run tests (if the -test command argument has been specified)
 	//int testsResult = run_all_tests(argc, argv);
