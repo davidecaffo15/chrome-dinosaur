@@ -60,7 +60,8 @@ int computePrize(int score, int usedPrize) { \\Give the user the missile
 }
 
 // The main engine!
-void startEngine(int highScore, struct user firstUser) {\\ What should be shown by this code
+void startEngine(int highScore, struct user firstUser) {
+\\ What should be shown by this code
     srand(time(NULL));
 	int x, y, diX=5, prize=0, usedPrize=0, score=0, delayTime = 300000
     , gameStatus=1, cactusNum=0;
