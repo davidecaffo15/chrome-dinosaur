@@ -1,7 +1,9 @@
 #include <ncurses.h>
 /**
- * @fn void dinosaur1
- * @brief This function, together with the void dinosaur2 function, shows how the dino is gonna look like during animation
+ * \fn void dinosaur1
+ * \fn void dinosaur2
+ * \brief These functions shows how the dino is gonna look like during the runing animation
+ * \author Stefano Rosano
  */
 void dinosaur1(int y, int x) {
 	mvprintw(y-4, x, "          e-e  ");
@@ -18,7 +20,12 @@ void dinosaur2(int y, int x) {
 	mvprintw(y-1, x, " '-._, )/'");
 	mvprintw(y, x,   "      /\\");
 }
-
+/**
+ * \fn void cactus1
+ * \fn void cactus2
+ * \brief These functions shows the cactus in the game
+ * \author Stefano Rosano
+ */
 void cactus1(int y, int x) {
 	mvprintw(y-5, x, "    _ ");
 	mvprintw(y-4, x, " _ ( )   ");
@@ -40,7 +47,11 @@ void cactus2(int y, int x) {
 	mvprintw(y, x, "   | |");
 	attroff(COLOR_PAIR(5));
 }
-
+/**
+ \fn void sun
+ \brief this function show the sun in game
+ \author Stefano Rosano
+*/
 void sun(int y, int x) {
 	attron(COLOR_PAIR(6));
 	mvprintw(y-8, x, "      ;   :   ;");
@@ -54,7 +65,11 @@ void sun(int y, int x) {
 	mvprintw(y, x, "      ;   :   ;");
 	attroff(COLOR_PAIR(6));
 }
-
+/**
+ \fn void moon
+ \brief this function show the moon in game
+ \author Stefano Rosano
+*/
 void moon(int y, int x) {
 	attron(COLOR_PAIR(4));
 	mvprintw(y-8, x, "                      ");
@@ -68,7 +83,11 @@ void moon(int y, int x) {
 	mvprintw(y, x, "    ```                 ");
 	attroff(COLOR_PAIR(4));
 }
-
+/**
+ \fn void showLoss
+ \brief this function show the loss text in game
+ \author Stefano Rosano
+*/
 void showLoss(int y, int x) {
 	mvprintw(y-6, x-15, "88");
 	mvprintw(y-5, x-15, "88");
@@ -81,7 +100,11 @@ void showLoss(int y, int x) {
 	mvprintw(y+3, x-15, "Press 'r' to play again!");
 	mvprintw(y+4, x-15, "Or 'q' to exit from game.");
 }
-
+/**
+ \fn void showTrex
+ \brief this function show the main menu when you lunch the game text in game
+ \author Stefano Rosano
+*/
 void showTrex(int x, int y) {
 	mvprintw(x-7, y-25, "  ,d");
 	mvprintw(x-6, y-25, "  88");
@@ -92,7 +115,11 @@ void showTrex(int x, int y) {
 	mvprintw(x-1, y-25, "  \"Y888 88          `\"Ybbd8\"' 8P\'     `Y8");
 }
 
-
+/**
+ * \fn void clearCactus1
+ * \brief This function delete the cactus in the game
+ * \author Stefano Rosano
+ */
 void clearCactus1(int y, int x) {
 	mvprintw(y-6, x+7, "        ");
 	mvprintw(y-5, x+8, "           ");
@@ -111,7 +138,12 @@ void clearCactus1(int y, int x) {
 		mvprintw(y, 0, "    ");
 	}
 }
-
+/**
+ \fn cleardinosaurDown
+ \fn cleardinosaurUp
+ \brief those functions delete the dinosaur when he jump in air or he lands
+ \author Stefano Rosano
+*/
 void cleardinosaurDown(int diY, int diX) {
 	mvprintw(diY+3, diX+10, "              ");
 	mvprintw(diY+4, diX+8, "              ");
