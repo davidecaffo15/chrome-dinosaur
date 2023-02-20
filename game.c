@@ -12,6 +12,72 @@
  * @brief This function is the checkpoint of the entire game
  */
 // Check if the game is going to be finished in this turn of loop
+int tests_run = 0;
+int tests_passed = 0;
+
+// Example test function
+void test_checkGame() {
+	int oracolo=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((20+14)-38) <= oracolo );
+}
+
+void test_checkGame_2() {
+	int oracolo_2=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((20+14)-30) <= oracolo_2);
+}
+
+void test_checkGame_3() {
+	int oracolo_3=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((20+14)-1) <= oracolo_3);
+}
+
+void test_checkGame_4() {
+	int oracolo_4=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((1+1)-1) <= oracolo_4);
+}
+
+void test_checkGame_5() {
+	int oracolo_5=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((2+2)-10) <= oracolo_5);
+}
+
+void test_checkGame_6() {
+	int oracolo_6=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((-15-25)+41) <= oracolo_6);
+}
+
+void test_checkGame_7() {
+	int oracolo_7=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((1-3)*25) <= oracolo_7);
+}
+
+void test_checkGame_8() {
+	int oracolo_8=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs(pow(12, -4)) <= oracolo_8);
+}
+
+void test_checkGame_9() {
+	int oracolo_9=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((1-7)/3) <= oracolo_9);
+}
+
+void test_checkGame_10() {
+	int oracolo_10=4;
+	mu_assert("Errore, calcolo maggiore di 4", abs((1/4)*7) <= oracolo_10);
+}
+void all_tests() {
+	mu_run_test(test_checkGame);
+	mu_run_test(test_checkGame_2);
+	mu_run_test(test_checkGame_3);
+	mu_run_test(test_checkGame_4);
+	mu_run_test(test_checkGame_5);
+	mu_run_test(test_checkGame_6);
+	mu_run_test(test_checkGame_7);
+	mu_run_test(test_checkGame_8);
+	mu_run_test(test_checkGame_9);
+	mu_run_test(test_checkGame_10);
+}
+
 int checkGame(int y, int x, int diY, int diX) {
 	if (diY == y) {
 		if (abs((diX+14)-x) <= 4) {
